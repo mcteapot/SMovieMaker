@@ -9,6 +9,8 @@ Project("{ED4EF1BD-F9D7-A990-E36F-831F9EFC5E69}") = "SMovieMaker", "Assembly-CSh
 EndProject
 Project("{ED4EF1BD-F9D7-A990-E36F-831F9EFC5E69}") = "SMovieMaker", "Assembly-UnityScript-firstpass.unityproj", "{A1206EE9-14BC-6687-B597-9E0D7BFD5AA8}"
 EndProject
+Project("{ED4EF1BD-F9D7-A990-E36F-831F9EFC5E69}") = "SMovieMaker", "Assembly-UnityScript.unityproj", "{8FA6F416-87F9-8512-61B1-BFE0F7A9CFF5}"
+EndProject
 Project("{ED4EF1BD-F9D7-A990-E36F-831F9EFC5E69}") = "SMovieMaker", "Assembly-UnityScript-Editor.unityproj", "{A7D046C2-D03F-5431-6C24-73D66371E00C}"
 EndProject
 Global
@@ -33,6 +35,10 @@ Global
 		{A1206EE9-14BC-6687-B597-9E0D7BFD5AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1206EE9-14BC-6687-B597-9E0D7BFD5AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1206EE9-14BC-6687-B597-9E0D7BFD5AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA6F416-87F9-8512-61B1-BFE0F7A9CFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA6F416-87F9-8512-61B1-BFE0F7A9CFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA6F416-87F9-8512-61B1-BFE0F7A9CFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA6F416-87F9-8512-61B1-BFE0F7A9CFF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7D046C2-D03F-5431-6C24-73D66371E00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7D046C2-D03F-5431-6C24-73D66371E00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7D046C2-D03F-5431-6C24-73D66371E00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,7 +47,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																			GlobalSection(MonoDevelopProperties) = preSolution
+																																											GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
