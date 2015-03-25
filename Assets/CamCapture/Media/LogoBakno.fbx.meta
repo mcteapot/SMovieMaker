@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: ce153564a574444baaa41d22f5b9d173
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: a
+    100002: b
+    100004: baKno
+    100006: Games
+    100008: K
+    100010: //RootNode
+    100012: n
+    100014: o
+    100016: Squares
+    400000: a
+    400002: b
+    400004: baKno
+    400006: Games
+    400008: K
+    400010: //RootNode
+    400012: n
+    400014: o
+    400016: Squares
+    2300000: a
+    2300002: b
+    2300004: Games
+    2300006: K
+    2300008: n
+    2300010: o
+    2300012: Squares
+    3300000: a
+    3300002: b
+    3300004: Games
+    3300006: K
+    3300008: n
+    3300010: o
+    3300012: Squares
+    4300000: b
+    4300002: a
+    4300004: K
+    4300006: n
+    4300008: o
+    4300010: Squares
+    4300012: Games
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

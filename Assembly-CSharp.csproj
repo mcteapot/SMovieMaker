@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CamCapture\Scripts\CamCaptureControler.cs" />
+     <Compile Include="Assets\CamCapture\Scripts\Helpers\ControllerCamera.cs" />
      <Compile Include="Assets\First Person Drifter Controller\Scripts\FirstPersonDrifter.cs" />
      <Compile Include="Assets\First Person Drifter Controller\Scripts\LockMouse.cs" />
      <Compile Include="Assets\First Person Drifter Controller\Scripts\MouseLook.cs" />
@@ -77,7 +79,10 @@
      <Compile Include="Assets\OceanIdle\Plugins\WaveSpectriumCPU.cs" />
      <Compile Include="Assets\OceanIdle\Scripts\AddBuoyancy.cs" />
      <Compile Include="Assets\OceanIdle\Scripts\Ocean.cs" />
+     <Compile Include="Assets\SMovieMaker\Plugins\CamVideoCapture.cs" />
      <Compile Include="Assets\SMovieMaker\Script\Bumper.cs" />
+     <Compile Include="Assets\SMovieMaker\Script\CamCaptureController.cs" />
+     <Compile Include="Assets\SMovieMaker\Script\CamRecordController.cs" />
      <Compile Include="Assets\SMovieMaker\Script\CoolCam.cs" />
      <Compile Include="Assets\SMovieMaker\Script\CoolCollider.cs" />
      <Compile Include="Assets\SMovieMaker\Script\GameController.cs" />
@@ -119,6 +124,7 @@
      <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\SMovieMaker\Plugins\Readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
      <None Include="Assets\SMovieMaker\Shader\TreeVertexLit.cginc" />
