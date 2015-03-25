@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CamCapture/Scripts/CamCaptureControler.cs">
     <Files>
-      <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="80" Column="1" />
-      <File FileName="Assets/CamCapture/Scripts/CamCaptureControler.cs" Line="68" Column="6" />
+      <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="138" Column="53" />
+      <File FileName="Assets/CamCapture/Scripts/CamCaptureControler.cs" Line="90" Column="4" />
       <File FileName="Assets/CamCapture/Scripts/Helpers/ControllerCamera.cs" Line="27" Column="23" />
-      <File FileName="Assets/SMovieMaker/Script/CamRecordController.cs" Line="63" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/CamRecordController.cs" Line="25" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

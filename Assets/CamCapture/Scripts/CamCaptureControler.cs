@@ -55,11 +55,15 @@ public class CamCaptureControler : MonoBehaviour {
 			if (Time.fixedTime > capTime + (1/framerate)) {  
 				capTime = Time.fixedTime;
 				//StartCoroutine(baKnoCapture.AddFrame());
+				StartCoroutine(CamVideoCapture.AddFrameWithRenderTexture(renderTexture));
+				//StartCoroutine(CamVideoCapture.AddFrame());
+				/*
 				if(recMainCam) {
 					StartCoroutine(CamVideoCapture.AddFrame());
 				} else {
 					StartCoroutine(CamVideoCapture.AddFrameWithRenderTexture(renderTexture));
 				}
+				*/
 			}
 		}
 	}
@@ -97,13 +101,17 @@ public class CamCaptureControler : MonoBehaviour {
 		
 		
 		CamVideoCapture.PrepareAudio();
-		
+
+		//CamVideoCapture.PrepareVideo(imageQuality);
+		CamVideoCapture.PrepareVideoWithRenderTexture(imageQuality, renderTexture);
+		/*
 		if(recMainCam) {
 			CamVideoCapture.PrepareVideo(imageQuality);
 		} else {
 			CamVideoCapture.PrepareVideoWithRenderTexture(imageQuality, renderTexture);
 		}
-		
+		*/
+
 		CamVideoCapture.ClearVideoData();
 	}
 
@@ -127,9 +135,12 @@ public class CamCaptureControler : MonoBehaviour {
 
 	public void SaveMovie() {
 		Debug.Log("Save Movie");
+
 		SetFilePatch();
 		byte[] bin = CamVideoCapture.GetBinary();
 		File.WriteAllBytes(filePath, bin);
+
+		CamVideoCapture.ClearVideoData();
 	}
 
 }

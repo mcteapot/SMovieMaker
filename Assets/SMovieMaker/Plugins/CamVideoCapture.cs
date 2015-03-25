@@ -84,52 +84,60 @@ public class CamVideoCapture : MonoBehaviour {
 	// ADD FRAME TO CAPTURE
 	static public IEnumerator AddFrame() {
 		//Debug.Log("AddFrame");
-		yield return new WaitForEndOfFrame();
-		grabbing = true;
-		if (tex) {
-			frameIndex = frameIndex + 1;
-			byteFrame.Add(new List<byte>());
-	    	tex.ReadPixels (new Rect(0, 0, frameWidth, frameHeight), 0, 0, false); 
-	     	byte[] frame = tex.EncodeToJPG(imageQuality);
-	     	byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(1667510320));
-	     	sizes.Add(frame.Length);
-	     	byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(frame.Length)); 
-			byteFrame[frameIndex].AddRange(frame);
-			if (frame.Length%2==1) { 
-				byteFrame[frameIndex].Add((byte) 0);
-				padds.Add(1);
-			}else{
-				padds.Add(0);
+
+		if(!grabbing) {
+			yield return new WaitForEndOfFrame();
+			grabbing = true;
+			if (tex) {
+				frameIndex = frameIndex + 1;
+				byteFrame.Add(new List<byte>());
+		    	tex.ReadPixels (new Rect(0, 0, frameWidth, frameHeight), 0, 0, false); 
+		     	byte[] frame = tex.EncodeToJPG(imageQuality);
+		     	byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(1667510320));
+		     	sizes.Add(frame.Length);
+		     	byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(frame.Length)); 
+				byteFrame[frameIndex].AddRange(frame);
+				if (frame.Length%2==1) { 
+					byteFrame[frameIndex].Add((byte) 0);
+					padds.Add(1);
+				}else{
+					padds.Add(0);
+				}
+				if (frame.Length > biggestFrame) biggestFrame = frame.Length;
 			}
-			if (frame.Length > biggestFrame) biggestFrame = frame.Length;
+			grabbing = false;
 		}
-		grabbing = false;
 	}
 
 	static public IEnumerator AddFrameWithRenderTexture(RenderTexture newRenderTexture) {
 		//Debug.Log("AddFrame");
-		yield return new WaitForEndOfFrame();
-		grabbing = true;
-		if (tex) {
-			frameIndex = frameIndex + 1;
-			byteFrame.Add(new List<byte>()); 
-			RenderTexture.active = newRenderTexture;
-			tex.ReadPixels(new Rect(0, 0, newRenderTexture.width, newRenderTexture.height), 0, 0);
-			tex.Apply();
-			byte[] frame = tex.EncodeToJPG(imageQuality);
-			byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(1667510320));
-			sizes.Add(frame.Length);
-			byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(frame.Length));
-			byteFrame[frameIndex].AddRange(frame);
-			if (frame.Length%2==1) { 
-				byteFrame[frameIndex].Add((byte) 0);
-				padds.Add(1);
-			}else{
-				padds.Add(0);
+
+		if(!grabbing) {
+			yield return new WaitForEndOfFrame();
+			grabbing = true;
+			if (tex) {
+				frameIndex = frameIndex + 1;
+				byteFrame.Add(new List<byte>()); 
+				RenderTexture.active = newRenderTexture;
+				tex.ReadPixels(new Rect(0, 0, frameWidth, frameHeight), 0, 0);
+				tex.Apply();
+				byte[] frame = tex.EncodeToJPG(imageQuality);
+				byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(1667510320));
+				sizes.Add(frame.Length);
+				byteFrame[frameIndex].AddRange(System.BitConverter.GetBytes(frame.Length));
+				byteFrame[frameIndex].AddRange(frame);
+				if (frame.Length%2==1) { 
+					byteFrame[frameIndex].Add((byte) 0);
+					padds.Add(1);
+				}else{
+					padds.Add(0);
+				}
+				if (frame.Length > biggestFrame) biggestFrame = frame.Length;
+
+				RenderTexture.active = null; 
 			}
-			if (frame.Length > biggestFrame) biggestFrame = frame.Length;
+			grabbing = false;
 		}
-		grabbing = false;
 	}	
 	
 	static public byte[] GetBinary(){ 

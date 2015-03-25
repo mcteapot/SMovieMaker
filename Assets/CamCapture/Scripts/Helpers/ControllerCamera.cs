@@ -23,7 +23,7 @@ public class ControllerCamera : MonoBehaviour {
 			}
 		}
 
-		if(Input.GetKeyDown("s")) {
+		if(Input.GetKeyDown("t")) {
 			camCaptureControler.SaveMovie();
 		}
 
