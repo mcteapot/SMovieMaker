@@ -86,6 +86,7 @@
      <Compile Include="Assets\SMovieMaker\Script\Bumper.cs" />
      <Compile Include="Assets\SMovieMaker\Script\Cam\CamCaptureControler.cs" />
      <Compile Include="Assets\SMovieMaker\Script\Cam\ControllerCamera.cs" />
+     <Compile Include="Assets\SMovieMaker\Script\CanvasController.cs" />
      <Compile Include="Assets\SMovieMaker\Script\GameController.cs" />
      <Compile Include="Assets\SMovieMaker\Script\Helpers\StickToSomething.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
