@@ -46,9 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CamCapture\Scripts\Helpers\CameraAnimation.js" />
-     <Compile Include="Assets\CamCapture\Scripts\Helpers\CaptureControl.js" />
-     <Compile Include="Assets\CamCapture\Scripts\Helpers\LetterAnimation.js" />
      <Compile Include="Assets\OceanIdle\Scripts\FPS.js" />
      <Compile Include="Assets\OceanIdle\Scripts\Wireframe.js" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />

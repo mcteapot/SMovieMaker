@@ -49,6 +49,8 @@ public class CamVideoCapture : MonoBehaviour {
 
 		frameIndex = -1;
 
+		grabbing = false;
+
 		byteFrame = new List<List<byte>>(); 
 		byteSample = new List<List<byte>>();
 
@@ -104,6 +106,8 @@ public class CamVideoCapture : MonoBehaviour {
 					padds.Add(0);
 				}
 				if (frame.Length > biggestFrame) biggestFrame = frame.Length;
+			} else {
+				Debug.LogWarning("tex not defined");
 			}
 			grabbing = false;
 		}
@@ -117,6 +121,7 @@ public class CamVideoCapture : MonoBehaviour {
 			grabbing = true;
 			if (tex) {
 				frameIndex = frameIndex + 1;
+				//Debug.Log("RECORDING " + frameIndex);
 				byteFrame.Add(new List<byte>()); 
 				RenderTexture.active = newRenderTexture;
 				tex.ReadPixels(new Rect(0, 0, frameWidth, frameHeight), 0, 0);
@@ -135,6 +140,8 @@ public class CamVideoCapture : MonoBehaviour {
 				if (frame.Length > biggestFrame) biggestFrame = frame.Length;
 
 				RenderTexture.active = null; 
+			} else {
+				Debug.LogWarning("tex not defined");
 			}
 			grabbing = false;
 		}
