@@ -856,7 +856,7 @@ GameObject:
   - 33: {fileID: 60319549}
   - 65: {fileID: 60319548}
   - 23: {fileID: 60319547}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Wall_Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +955,7 @@ GameObject:
   - 4: {fileID: 63943700}
   - 54: {fileID: 63943702}
   - 114: {fileID: 63943701}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CamHand_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1284,7 +1284,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 101472305}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: j_wrist_tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2024,7 +2024,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 146948947}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: o_null_Cop_hand_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2429,7 +2429,7 @@ GameObject:
   - 4: {fileID: 165568646}
   - 33: {fileID: 165568648}
   - 23: {fileID: 165568647}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_hinge_cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3357,7 +3357,7 @@ GameObject:
   - 114: {fileID: 216604064}
   - 114: {fileID: 216604063}
   - 54: {fileID: 216604070}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3414,7 +3414,7 @@ MonoBehaviour:
   walkSpeed: 6
   runSpeed: 10
   enableRunning: 0
-  jumpSpeed: 4
+  jumpSpeed: 8
   gravity: 10
   slideWhenOverSlopeLimit: 0
   slideOnTaggedObjects: 0
@@ -3422,6 +3422,9 @@ MonoBehaviour:
   airControl: 1
   antiBumpFactor: .75
   antiBunnyHopFactor: 1
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294443007
 --- !u!143 &216604066
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3541,6 +3544,26 @@ Prefab:
     - target: {fileID: 163246, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
       propertyPath: m_Name
       value: CamPhysicsArm_Null
+      objectReference: {fileID: 0}
+    - target: {fileID: 163244, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 163246, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 163248, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 163250, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 163252, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
+      propertyPath: m_Layer
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a61d3596a15e6421cb41c19023549e88, type: 2}
@@ -4184,7 +4207,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 287572744}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6030,7 +6053,7 @@ GameObject:
   - 33: {fileID: 401794093}
   - 65: {fileID: 401794092}
   - 23: {fileID: 401794091}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Wall_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6242,7 +6265,7 @@ GameObject:
   - 114: {fileID: 420489666}
   - 82: {fileID: 420489668}
   - 114: {fileID: 420489669}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CamController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6526,15 +6549,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 449790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.639999986
+      value: -6.88000011
       objectReference: {fileID: 0}
     - target: {fileID: 449790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.69000006
+      value: 6.8499999
       objectReference: {fileID: 0}
     - target: {fileID: 449790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.44000006
+      value: 13.79
       objectReference: {fileID: 0}
     - target: {fileID: 449790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6554,11 +6577,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 149790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449790, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
+      propertyPath: ForceAIMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3defe4ad113a4d36b097acf6488038d, type: 2}
@@ -6794,7 +6821,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449355179}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: j_sholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7828,7 +7855,7 @@ GameObject:
   - 4: {fileID: 517127384}
   - 33: {fileID: 517127386}
   - 23: {fileID: 517127385}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_eyepiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8226,6 +8253,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   Others: []
   ControlMode: 0
+  AIMode: 0
   ControllerNumber: 2
   VoiceClips:
   - {fileID: 8300000, guid: 27c6bfa23f8ce4b7a96b0a51ad36a6bb, type: 3}
@@ -8250,6 +8278,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06afc0a4e1ae84e8180eeec946b1ff8d, type: 3}
   CamParent: {fileID: 660831529}
   FirstPersonCam: {fileID: 660831530}
+  AISpeed: 1
 --- !u!82 &541774317
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11244,7 +11273,7 @@ GameObject:
   - 64: {fileID: 755273097}
   - 23: {fileID: 755273096}
   - 95: {fileID: 755273099}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: RecordIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12161,7 +12190,7 @@ GameObject:
   - 4: {fileID: 792942933}
   - 33: {fileID: 792942935}
   - 23: {fileID: 792942934}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_Screen_LCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12252,7 +12281,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 797187115}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_Body_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12936,7 +12965,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 843030160}
   - 108: {fileID: 843030161}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13001,7 +13030,7 @@ GameObject:
   - 4: {fileID: 848897789}
   - 33: {fileID: 848897791}
   - 23: {fileID: 848897790}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_menu_wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13636,6 +13665,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   Others: []
   ControlMode: 0
+  AIMode: 0
   ControllerNumber: 2
   VoiceClips:
   - {fileID: 8300000, guid: 09163f565c2074ca9a4c467dcde7916c, type: 3}
@@ -13659,6 +13689,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cedfd8a3a12084c558deb8737afefd0e, type: 3}
   CamParent: {fileID: 1974720534}
   FirstPersonCam: {fileID: 1974720535}
+  AISpeed: 1
 --- !u!82 &894130764
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13861,7 +13892,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 913404104}
   - 114: {fileID: 913404105}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CamCamera_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14144,7 +14175,7 @@ GameObject:
   - 4: {fileID: 933919414}
   - 33: {fileID: 933919416}
   - 23: {fileID: 933919415}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_lens_housing_back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15570,7 +15601,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1011009130}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CamHand_Pos_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15943,7 +15974,7 @@ GameObject:
   - 4: {fileID: 1033455554}
   - 33: {fileID: 1033455556}
   - 23: {fileID: 1033455555}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_tape_housing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16267,6 +16298,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   Others: []
   ControlMode: 0
+  AIMode: 0
   ControllerNumber: 4
   VoiceClips:
   - {fileID: 8300000, guid: f0ba3438e9a814834a26423917b1fecb, type: 3}
@@ -16284,6 +16316,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d2f4941b73e343d9891c204714f89d7, type: 3}
   CamParent: {fileID: 1883534463}
   FirstPersonCam: {fileID: 1883534464}
+  AISpeed: 1
 --- !u!65 &1041953375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16350,7 +16383,7 @@ GameObject:
   - 4: {fileID: 1044910712}
   - 33: {fileID: 1044910714}
   - 23: {fileID: 1044910713}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_strap_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17715,7 +17748,7 @@ GameObject:
   - 54: {fileID: 1143001703}
   - 59: {fileID: 1143001702}
   - 114: {fileID: 1143001701}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Root (Move This)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18183,6 +18216,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   Others: []
   ControlMode: 0
+  AIMode: 0
   ControllerNumber: 1
   VoiceClips:
   - {fileID: 8300000, guid: dac6532319c5c4f66bde18403ff4d6db, type: 3}
@@ -18203,6 +18237,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3351a4a68ebc94cb5a69acdf36d78f87, type: 3}
   CamParent: {fileID: 2038493770}
   FirstPersonCam: {fileID: 2038493771}
+  AISpeed: 1
 --- !u!82 &1163941011
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18363,7 +18398,7 @@ GameObject:
   - 114: {fileID: 1175001811}
   - 114: {fileID: 1175001810}
   - 114: {fileID: 1175001819}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -19422,7 +19457,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1213049958}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CamPhysicsArm_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19606,7 +19641,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1226370353}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_eyepice_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20875,7 +20910,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1284006801}
   - 114: {fileID: 1284006802}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: j_forarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21394,6 +21429,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400014, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
+      propertyPath: collisionMask.m_Bits
+      value: 4294443007
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400014, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
+      propertyPath: jumpSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
   m_RootGameObject: {fileID: 216604062}
@@ -21733,7 +21784,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1340072604}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_Screen_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22540,7 +22591,7 @@ GameObject:
   - 33: {fileID: 1374678580}
   - 65: {fileID: 1374678579}
   - 23: {fileID: 1374678578}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Wall_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22761,7 +22812,7 @@ GameObject:
   - 4: {fileID: 1382908151}
   - 33: {fileID: 1382908153}
   - 23: {fileID: 1382908152}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_light_housing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22922,7 +22973,7 @@ GameObject:
   - 23: {fileID: 1389465805}
   - 54: {fileID: 1389465803}
   - 59: {fileID: 1389465804}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23231,6 +23282,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   Others: []
   ControlMode: 0
+  AIMode: 0
   ControllerNumber: 1
   VoiceClips:
   - {fileID: 8300000, guid: beb0654a108344ffdba06c3def59e457, type: 3}
@@ -23280,6 +23332,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d9e570294054a4c8f8bfbb9f50dfbe42, type: 3}
   CamParent: {fileID: 1795534065}
   FirstPersonCam: {fileID: 1795534066}
+  AISpeed: 1
 --- !u!65 &1393109162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23477,7 +23530,7 @@ GameObject:
   - 4: {fileID: 1399192958}
   - 33: {fileID: 1399192960}
   - 23: {fileID: 1399192959}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_strap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23690,7 +23743,7 @@ GameObject:
   - 4: {fileID: 1416831245}
   - 33: {fileID: 1416831247}
   - 23: {fileID: 1416831246}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_battery_release_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23919,7 +23972,7 @@ GameObject:
   - 65: {fileID: 1441323640}
   - 23: {fileID: 1441323639}
   - 54: {fileID: 1441323638}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24240,6 +24293,42 @@ Prefab:
       propertyPath: stickObject
       value: 
       objectReference: {fileID: 1638295194}
+    - target: {fileID: 119488, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119486, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119484, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119482, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119480, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119478, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119476, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119474, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 119472, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e069478d59bf646bdbb6da5336b7cdc9, type: 2}
   m_RootGameObject: {fileID: 63943699}
@@ -24352,7 +24441,7 @@ GameObject:
   - 4: {fileID: 1488772959}
   - 33: {fileID: 1488772961}
   - 23: {fileID: 1488772960}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_open_eject_switch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24414,7 +24503,7 @@ GameObject:
   - 81: {fileID: 1490134047}
   - 124: {fileID: 1490134049}
   - 114: {fileID: 1490134051}
-  m_Layer: 1
+  m_Layer: 20
   m_Name: CamScreemRecord
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -24575,7 +24664,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1490732995}
   - 137: {fileID: 1490732996}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: o_Cop_hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25236,7 +25325,7 @@ GameObject:
   - 4: {fileID: 1529946400}
   - 33: {fileID: 1529946402}
   - 23: {fileID: 1529946401}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25418,6 +25507,106 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 176346, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176348, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176350, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176352, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176354, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176356, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176358, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176360, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176362, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176364, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176366, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176368, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176370, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176372, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176374, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176376, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176378, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176380, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176382, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176384, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176386, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176388, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176390, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176392, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 176394, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c1555debb0a342bab611b8e972c2fa3, type: 2}
   m_RootGameObject: {fileID: 913404103}
@@ -25519,7 +25708,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1549175903}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: j_wrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26692,7 +26881,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1638295194}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: j_forarm_offset_Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26776,7 +26965,7 @@ GameObject:
   - 4: {fileID: 1653159634}
   - 33: {fileID: 1653159636}
   - 23: {fileID: 1653159635}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_zoom_wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27810,7 +27999,7 @@ GameObject:
   - 4: {fileID: 1712820779}
   - 33: {fileID: 1712820781}
   - 23: {fileID: 1712820780}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_lens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27953,7 +28142,7 @@ GameObject:
   - 4: {fileID: 1720893414}
   - 33: {fileID: 1720893416}
   - 23: {fileID: 1720893415}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_lens_housing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29385,7 +29574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1814383416
 Transform:
   m_ObjectHideFlags: 0
@@ -31856,7 +32045,7 @@ GameObject:
   - 4: {fileID: 1944945687}
   - 33: {fileID: 1944945689}
   - 23: {fileID: 1944945688}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31945,7 +32134,7 @@ GameObject:
   - 4: {fileID: 1947547273}
   - 33: {fileID: 1947547275}
   - 23: {fileID: 1947547274}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_IR_cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32091,7 +32280,7 @@ GameObject:
   - 33: {fileID: 1959813964}
   - 65: {fileID: 1959813963}
   - 23: {fileID: 1959813962}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Wall_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32688,7 +32877,7 @@ GameObject:
   - 4: {fileID: 1989323789}
   - 33: {fileID: 1989323791}
   - 23: {fileID: 1989323790}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: dvcam_battery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33959,7 +34148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2057458428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33972,6 +34161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe8be6cd8c99454cac8bae9e31b9ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ForceAIMode: 1
   CharacterPrefabs:
   - {fileID: 11441454, guid: 1fe5a13cc78884aa9a6df6d93de79b34, type: 2}
   - {fileID: 11494132, guid: eee135f8e65d54f0e898b650b0859725, type: 2}
@@ -33987,7 +34177,7 @@ Transform:
   m_PrefabInternal: {fileID: 434011586}
   m_GameObject: {fileID: 2057458427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.639999986, y: 1.69000006, z: 4.44000006}
+  m_LocalPosition: {x: -6.88000011, y: 6.8499999, z: 13.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -34720,7 +34910,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2125127630}
   - 95: {fileID: 2125127631}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: CamHand01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -39,6 +39,8 @@ public class FirstPersonDrifter: MonoBehaviour
     // Player must be grounded for at least this many physics frames before being able to jump again; set to 0 to allow bunny hopping
     public int antiBunnyHopFactor = 1;
  
+	public LayerMask collisionMask = int.MaxValue;
+
     private Vector3 moveDirection = Vector3.zero;
     private bool grounded = false;
     private CharacterController controller;
@@ -73,14 +75,14 @@ public class FirstPersonDrifter: MonoBehaviour
             bool sliding = false;
             // See if surface immediately below should be slid down. We use this normally rather than a ControllerColliderHit point,
             // because that interferes with step climbing amongst other annoyances
-            if (Physics.Raycast(myTransform.position, -Vector3.up, out hit, rayDistance)) {
+            if (Physics.Raycast(myTransform.position, -Vector3.up, out hit, rayDistance, collisionMask)) {
                 if (Vector3.Angle(hit.normal, Vector3.up) > slideLimit)
                     sliding = true;
             }
             // However, just raycasting straight down from the center can fail when on steep slopes
             // So if the above raycast didn't catch anything, raycast down from the stored ControllerColliderHit point instead
             else {
-                Physics.Raycast(contactPoint + Vector3.up, -Vector3.up, out hit);
+				Physics.Raycast(contactPoint + Vector3.up, -Vector3.up, out hit, collisionMask);
                 if (Vector3.Angle(hit.normal, Vector3.up) > slideLimit)
                     sliding = true;
             }

@@ -12,6 +12,12 @@ public class SonicController : MonoBehaviour
 		Arms = 1,
 	}
 
+	public enum AIType
+	{
+		Player = 0,
+		Normal = 1,
+	}
+
 	public Heart HeartPrefab;
 
 	public CharacterJoint[] Joints;
@@ -39,6 +45,7 @@ public class SonicController : MonoBehaviour
 	public List<CharacterJoint> Others = new List<CharacterJoint>();
 
 	public ControlType ControlMode;
+	public AIType AIMode;
 
 	public int ControllerNumber = 1;
 
@@ -244,10 +251,30 @@ public class SonicController : MonoBehaviour
 
 	public float[] GetInputs(int controllerNumber)
 	{
+		switch (AIMode)
+		{
+		case AIType.Player:
+			return new float[]
+			{
+				Input.GetAxis(string.Format("Player{0} Horizontal", controllerNumber)),
+				Input.GetAxis(string.Format("Player{0} Vertical", controllerNumber)),
+			};
+		default:
+			return GetAIInputs();
+		}
+
+
+	}
+
+	public float AISpeed = 1f;
+	float _aiTime;
+	private float[] GetAIInputs()
+	{
+		_aiTime += Time.deltaTime * AISpeed;
 		return new float[]
 		{
-			Input.GetAxis(string.Format("Player{0} Horizontal", controllerNumber)),
-			Input.GetAxis(string.Format("Player{0} Vertical", controllerNumber)),
+			0f,
+			Mathf.Cos(_aiTime)
 		};
 	}
 

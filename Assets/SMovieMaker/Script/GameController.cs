@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GameController : MonoBehaviour 
 {
+	public bool ForceAIMode = false;
+
 	public SonicController[] CharacterPrefabs;
 
 	public SonicController[] CurrentPlayers;
@@ -81,6 +83,13 @@ public class GameController : MonoBehaviour
 		CurrentPlayers[index] = newobj;
 
 		newobj.SetControllerIndex(index+1);
+
+		if(ForceAIMode)
+		{
+			newobj.AIMode = SonicController.AIType.Normal;
+			newobj.AISpeed = Random.Range(.8f, 4f);
+			if(Random.value > .5f) newobj.AISpeed *= -1f;
+		}
 	}
 
 	public Vector3 GetSpawnPos()
