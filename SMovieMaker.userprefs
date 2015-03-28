@@ -8,7 +8,7 @@
       <File FileName="Assets/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs" Line="14" Column="24" />
       <File FileName="Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" Line="54" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/Helpers/StickToSomething.cs" Line="34" Column="73" />
-      <File FileName="Assets/SMovieMaker/Script/SteadyCamController.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/SteadyCamController.cs" Line="41" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
