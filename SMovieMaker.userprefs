@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Plugins/CamVideoCapture.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/SteadyCamController.cs">
     <Files>
-      <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="137" Column="34" />
+      <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="31" Column="46" />
+      <File FileName="Assets/SMovieMaker/Script/Cam/ControllerCamera.cs" Line="6" Column="21" />
+      <File FileName="Assets/SMovieMaker/Script/Cam/CamCaptureControler.cs" Line="103" Column="23" />
+      <File FileName="Assets/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs" Line="14" Column="24" />
+      <File FileName="Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" Line="54" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/Helpers/StickToSomething.cs" Line="34" Column="73" />
+      <File FileName="Assets/SMovieMaker/Script/SteadyCamController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
