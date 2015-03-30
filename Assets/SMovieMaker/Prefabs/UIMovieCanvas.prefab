@@ -110,6 +110,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22456196}
+  - 114: {fileID: 11449442}
   m_Layer: 5
   m_Name: UI_TIME
   m_TagString: Untagged
@@ -266,6 +267,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebefaf8350d3b45bab50e0e5bd1e4b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11449442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667730818e28648518ce8e37bb657e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordTimer: 0
+  uiTimerText: {fileID: 0}
 --- !u!114 &11452870
 MonoBehaviour:
   m_ObjectHideFlags: 1

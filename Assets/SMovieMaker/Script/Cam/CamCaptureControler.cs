@@ -24,6 +24,12 @@ public class CamCaptureControler : MonoBehaviour {
 	
 	public Transform recordIcon;
 
+	public CamCaptureControler camCaptureControler;
+	private bool isRecording = false; 
+	private bool isMaxTime = false;
+	
+	public int maxTimeSeconds = 15;
+
 	// Use this for initialization
 	void Start () {
 
