@@ -5,7 +5,7 @@ using System;
 
 public class CamCaptureControler : MonoBehaviour {
 	
-	private bool recording;
+	public bool recording;
 	public bool recVideo;
 	public bool recAudio;
 
@@ -24,7 +24,9 @@ public class CamCaptureControler : MonoBehaviour {
 	
 	public Transform recordIcon;
 
-	public CamCaptureControler camCaptureControler;
+	public bool isSavingToDrive;
+
+	//public CamCaptureControler camCaptureControler;
 	private bool isRecording = false; 
 	private bool isMaxTime = false;
 	
@@ -39,6 +41,8 @@ public class CamCaptureControler : MonoBehaviour {
 		recVideo = false;
 		recAudio = false;
 		tempVsync = QualitySettings.vSyncCount;
+
+		isSavingToDrive = false;
 
 		if(recordIcon != null) recordIcon.gameObject.SetActive(false);
 
@@ -101,30 +105,12 @@ public class CamCaptureControler : MonoBehaviour {
 		}
 		
 	}
-
-	private void InitVideoAudio() {
-		// set up recorder
-		
-		
-		CamVideoCapture.PrepareAudio();
-
-		//CamVideoCapture.PrepareVideo(imageQuality);
-		CamVideoCapture.PrepareVideoWithRenderTexture(imageQuality, renderTexture);
-		/*
-		if(recMainCam) {
-			CamVideoCapture.PrepareVideo(imageQuality);
-		} else {
-			CamVideoCapture.PrepareVideoWithRenderTexture(imageQuality, renderTexture);
-		}
-		*/
-
-		CamVideoCapture.ClearVideoData();
-	}
+	
 
 	private void StartCapture() {
 		Debug.Log("Capture start");
-		CamVideoCapture.ClearVideoData();
-		InitVideoAudio();
+		//CamVideoCapture.ClearVideoData();
+		//InitVideoAudio();
 
 		if(recordIcon != null) recordIcon.gameObject.SetActive(true);
 
@@ -143,12 +129,33 @@ public class CamCaptureControler : MonoBehaviour {
 
 	public void SaveMovie() {
 		Debug.Log("Save Movie");
+		isSavingToDrive = true;
 
 		SetFilePatch();
 		byte[] bin = CamVideoCapture.GetBinary();
 		File.WriteAllBytes(filePath, bin);
 
+		isSavingToDrive = false;
 
+
+	}
+
+	public void InitVideoAudio() {
+		// set up recorder
+
+		CamVideoCapture.PrepareAudio();
+		
+		//CamVideoCapture.PrepareVideo(imageQuality);
+		CamVideoCapture.PrepareVideoWithRenderTexture(imageQuality, renderTexture);
+		/*
+		if(recMainCam) {
+			CamVideoCapture.PrepareVideo(imageQuality);
+		} else {
+			CamVideoCapture.PrepareVideoWithRenderTexture(imageQuality, renderTexture);
+		}
+		*/
+		
+		CamVideoCapture.ClearVideoData();
 	}
 
 }

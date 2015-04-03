@@ -1229,6 +1229,22 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 11456204, guid: b85bb1b8ae12145a19a4385178d9d89f, type: 2}
+      propertyPath: m_Text
+      value: SAVING
+      objectReference: {fileID: 0}
+    - target: {fileID: 156200, guid: b85bb1b8ae12145a19a4385178d9d89f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452870, guid: b85bb1b8ae12145a19a4385178d9d89f, type: 2}
+      propertyPath: m_Text
+      value: < SELECT PROGRAM >
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456198, guid: b85bb1b8ae12145a19a4385178d9d89f, type: 2}
+      propertyPath: m_Text
+      value: 00:00:00
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11412096, guid: b85bb1b8ae12145a19a4385178d9d89f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b85bb1b8ae12145a19a4385178d9d89f, type: 2}
@@ -6386,9 +6402,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camCaptureControler: {fileID: 1490134046}
-  maxTimeSeconds: 15
+  maxTimeSeconds: 12
   uiControler: {fileID: 1775452755}
-  countDown: 0
+  countDown: 1
+  saveTime: 1.5
 --- !u!82 &420489667
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8821,7 +8838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 13:00:00
+  m_Text: 00:00:00
 --- !u!222 &569434585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10553,7 +10570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SAVE
+  m_Text: SAVING
 --- !u!222 &697470596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12483,6 +12500,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recordTimer: 0
   uiTimerText: {fileID: 0}
+  uiRecordText: {fileID: 0}
+  uiRecordIcon: {fileID: 0}
+  uiSaveIcon: {fileID: 0}
+  uiTimeIcon: {fileID: 0}
 --- !u!1 &803116262
 GameObject:
   m_ObjectHideFlags: 0
@@ -24641,13 +24662,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e783ccd9e9c445086f8b06622e0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recording: 0
   recVideo: 0
   recAudio: 0
   saveToDesktop: 1
   recMainCam: 1
   renderTexture: {fileID: 8400000, guid: a6782629e260f49c390438a2aa805cf8, type: 2}
   recordIcon: {fileID: 755273095}
-  camCaptureControler: {fileID: 0}
+  isSavingToDrive: 0
 --- !u!81 &1490134047
 AudioListener:
   m_ObjectHideFlags: 0
@@ -29085,6 +29107,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recordTimer: 0
   uiTimerText: {fileID: 569434584}
+  uiRecordText: {fileID: 1601261596}
+  uiRecordIcon: {fileID: 1033876272}
+  uiSaveIcon: {fileID: 1876701584}
+  uiTimeIcon: {fileID: 798831282}
 --- !u!1 &1780150138
 GameObject:
   m_ObjectHideFlags: 0
@@ -30821,7 +30847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1863593684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31267,7 +31293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: < SELEC PROGRAM >
+  m_Text: < SELECT PROGRAM >
 --- !u!222 &1879510246
 CanvasRenderer:
   m_ObjectHideFlags: 0
