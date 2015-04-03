@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Threading;
+
 
 public class ControllerCamera : MonoBehaviour {
 
@@ -13,17 +15,26 @@ public class ControllerCamera : MonoBehaviour {
 
 	public UIController uiControler;
 
-	private Stopwatch stopWatch;
-	
+	public bool countDown;
 
+	private Stopwatch stopWatch;
+	private TimeSpan maxTime;
+
+	private TimeSpan remaining { get { return maxTime - stopWatch.Elapsed; } }
 
 	// Use this for initialization
 	void Start () {
+
+		countDown = true;
+
 		stopWatch = new Stopwatch();
+		maxTime = TimeSpan.FromSeconds(maxTimeSeconds);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+
 
 		inputControls();
 
@@ -107,14 +118,26 @@ public class ControllerCamera : MonoBehaviour {
 
 		if(uiControler != null) {
 			if(stopWatch.Elapsed.Seconds >= maxTimeSeconds) {
-				uiControler.setTimerText("00:" + maxTimeSeconds + ":00");
+				if(!countDown) {
+					uiControler.setTimerText("00:" + maxTimeSeconds + ":00");
+				} else {
+					uiControler.setTimerText("00:00:00");
+				}
 			} else {
-			uiControler.setTimerText(string.Format("{0:00}:{1:00}:{2:00}", stopWatch.Elapsed.Minutes, stopWatch.Elapsed.Seconds, stopWatch.Elapsed.Milliseconds / 10));
+				if(!countDown) {
+					// count up
+					uiControler.setTimerText(string.Format("{0:00}:{1:00}:{2:00}", stopWatch.Elapsed.Minutes, stopWatch.Elapsed.Seconds, stopWatch.Elapsed.Milliseconds / 10));
+				} else {
+					// count down
+					uiControler.setTimerText(string.Format("{0:00}:{1:00}:{2:00}", remaining.Minutes, remaining.Seconds, remaining.Milliseconds / 10));
+				}
 			}
 		}
 
 		//UnityEngine.Debug.Log(string.Format("{0:00}:{1:00}:{2:00}", stopWatch.Elapsed.Minutes, stopWatch.Elapsed.Seconds, stopWatch.Elapsed.Milliseconds / 10));
 		//UnityEngine.Debug.Log(stopWatch.Elapsed.Seconds);
+
+		//UnityEngine.Debug.Log("remaining " + remaining);
 
 	}
 	

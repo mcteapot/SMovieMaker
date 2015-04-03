@@ -28,7 +28,7 @@ public class CamCaptureControler : MonoBehaviour {
 	private bool isRecording = false; 
 	private bool isMaxTime = false;
 	
-	public int maxTimeSeconds = 15;
+	//public int maxTimeSeconds = 15; think I dont need this anymore
 
 	// Use this for initialization
 	void Start () {

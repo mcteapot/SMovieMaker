@@ -6388,6 +6388,7 @@ MonoBehaviour:
   camCaptureControler: {fileID: 1490134046}
   maxTimeSeconds: 15
   uiControler: {fileID: 1775452755}
+  countDown: 0
 --- !u!82 &420489667
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24647,7 +24648,6 @@ MonoBehaviour:
   renderTexture: {fileID: 8400000, guid: a6782629e260f49c390438a2aa805cf8, type: 2}
   recordIcon: {fileID: 755273095}
   camCaptureControler: {fileID: 0}
-  maxTimeSeconds: 15
 --- !u!81 &1490134047
 AudioListener:
   m_ObjectHideFlags: 0
