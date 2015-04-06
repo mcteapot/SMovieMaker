@@ -207,7 +207,7 @@ public class SonicController : MonoBehaviour
 	}
 
 
-	public void Update()
+	private void Update()
 	{
 		inputs = GetInputs(ControllerNumber);
 
@@ -249,7 +249,7 @@ public class SonicController : MonoBehaviour
 		_voiceTimer -= Time.deltaTime;
 	}
 
-	public float[] GetInputs(int controllerNumber)
+	private float[] GetInputs(int controllerNumber)
 	{
 		switch (AIMode)
 		{
@@ -278,7 +278,7 @@ public class SonicController : MonoBehaviour
 		};
 	}
 
-	public void FixedUpdate()
+	private void FixedUpdate()
 	{
 		switch(ControlMode)
 		{
@@ -291,7 +291,7 @@ public class SonicController : MonoBehaviour
 		}
 	}
 
-	public void SpecificControls()
+	private void SpecificControls()
 	{
 		RotateArms(inputs[0]);
 		RotateElbows(inputs[0]);
@@ -302,7 +302,7 @@ public class SonicController : MonoBehaviour
 		FullBody(Others, inputs[0]);
 	}
 
-	public void RotateArms(float amount)
+	private void RotateArms(float amount)
 	{
 		var force = amount * 150f;
 		var forceMode = ForceMode.VelocityChange;
@@ -311,7 +311,7 @@ public class SonicController : MonoBehaviour
 		LeftArm.AddRelativeTorque(force * (-Vector3.up - Vector3.forward) , forceMode);
 	}
 
-	public void RotateElbows(float amount)
+	private void RotateElbows(float amount)
 	{
 		var force = Vector3.up * amount * 2f;
 		var forceMode = ForceMode.Force;
@@ -321,7 +321,7 @@ public class SonicController : MonoBehaviour
 		LeftElbow.AddRelativeForce(force * 8f, forceMode);
 	}
 
-	public void RotateLegs(float amount)
+	private void RotateLegs(float amount)
 	{
 		var force = amount * -15000f;
 		var forceMode = ForceMode.VelocityChange;
@@ -333,7 +333,7 @@ public class SonicController : MonoBehaviour
 //		LeftArm.AddRelativeTorque(force * (-Vector3.up - Vector3.forward) , forceMode);
 	}
 
-	public void RotateKnees(float amount)
+	private void RotateKnees(float amount)
 	{
 		var force = amount * 2000f;
 		var forceMode = ForceMode.Force;
@@ -342,12 +342,12 @@ public class SonicController : MonoBehaviour
 		LeftCalf.AddTorque(LeftCalf.transform.up * force, forceMode);
 	}
 
-	public void FullBody()
+	private void FullBody()
 	{
 		FullBody(Joints, inputs[1]);
 	}
 
-	public void FullBody(IEnumerable<CharacterJoint> rigidbodies, float input)
+	private void FullBody(IEnumerable<CharacterJoint> rigidbodies, float input)
 	{
 		foreach(var cj in rigidbodies)
 		{
@@ -355,7 +355,7 @@ public class SonicController : MonoBehaviour
 		}
 	}
 			
-	public void FullBody(CharacterJoint joint, float input)
+	private void FullBody(CharacterJoint joint, float input)
 	{
 		//var input = inputs[i%inputs.Length];
 		//joint.rigidbody.AddRelativeTorque(joint.swingAxis * input * 5000f * Time.deltaTime);
@@ -424,7 +424,7 @@ public class SonicController : MonoBehaviour
 		//ScoreController.Instance.AddScore(1);
 	}
 
-	public void SpawnHeart(Vector3 position)
+	private void SpawnHeart(Vector3 position)
 	{
 		var heart = Instantiate(HeartPrefab, position, Quaternion.identity) as Heart;
 	}
@@ -436,9 +436,24 @@ public class SonicController : MonoBehaviour
 		return clip;
 	}
 
-	public AudioClip GetRandomVoiceClip()
+	private AudioClip GetRandomVoiceClip()
 	{
 		if(VoiceClips.Length == 0) return null;
 		return VoiceClips[Random.Range(0, VoiceClips.Length)];
+	}
+
+	private void AdjustAISpeed(float amount)
+	{
+		AISpeed = Mathf.Clamp(AISpeed + amount, 0f, 20f);
+	}
+
+	public void TellSpeedUp()
+	{
+		AdjustAISpeed(.25f);
+	}
+
+	public void TellSlowDown()
+	{
+		AdjustAISpeed(-.25f);
 	}
 }

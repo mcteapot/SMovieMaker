@@ -427,7 +427,7 @@ GameObject:
   - 114: {fileID: 11409200}
   - 82: {fileID: 8209198}
   m_Layer: 8
-  m_Name: sonicRig
+  m_Name: Sonic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,6 +1734,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   Others: []
   ControlMode: 0
+  AIMode: 0
   ControllerNumber: 1
   VoiceClips:
   - {fileID: 8300000, guid: dac6532319c5c4f66bde18403ff4d6db, type: 3}
@@ -1754,6 +1755,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3351a4a68ebc94cb5a69acdf36d78f87, type: 3}
   CamParent: {fileID: 406836}
   FirstPersonCam: {fileID: 2006836}
+  AISpeed: 1
 --- !u!135 &13509198
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2691,7 +2693,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: .573684394, y: -3.35108865e-08, z: -8.99059387e-08}
+  m_ConnectedAnchor: {x: .573684812, y: 1.58073959e-07, z: 1.26693848e-07}
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_LowTwistLimit:
     limit: -80

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Threading;
+using Debug = UnityEngine.Debug;
 
 
 public class ControllerCamera : MonoBehaviour {
@@ -29,19 +30,19 @@ public class ControllerCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		//countDown = true;
 
 		stopWatch = new Stopwatch();
 		maxTime = TimeSpan.FromSeconds(maxTimeSeconds);
 
-		uiControler.uiSaveIcon.gameObject.SetActive(false);
+		if(uiControler != null)
+		{
+			uiControler.uiSaveIcon.gameObject.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
 
 		inputControls();
 
@@ -53,15 +54,9 @@ public class ControllerCamera : MonoBehaviour {
 			camCaptureControler.recAudio = false;
 		}
 		checkTime();
-
-
 	}
 
-
-
 	void inputControls() {
-
-
 		// Input Controls
 		//if(Input.GetKeyDown ("r")) {
 
