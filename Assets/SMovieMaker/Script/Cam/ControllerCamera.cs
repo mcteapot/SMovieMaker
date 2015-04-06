@@ -63,7 +63,10 @@ public class ControllerCamera : MonoBehaviour {
 
 
 		// Input Controls
-		if(Input.GetKeyDown ("r")) {
+		//if(Input.GetKeyDown ("r")) {
+
+		if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0))
+		{
 			//Debug.Log("WORKING");
 			if(!isSaving) {
 				if(isRecording)
@@ -131,6 +134,9 @@ public class ControllerCamera : MonoBehaviour {
 		}
 
 		if(uiControler != null) {
+			float progressRatio = (float)(stopWatch.ElapsedTicks / (double)maxTime.Ticks);
+			uiControler.SetTimerBar(progressRatio);
+
 			if(stopWatch.Elapsed.Seconds >= maxTimeSeconds) {
 				if(!countDown) {
 					uiControler.setTimerText("00:" + maxTimeSeconds + ":00");

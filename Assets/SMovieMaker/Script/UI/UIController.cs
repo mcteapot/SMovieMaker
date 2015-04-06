@@ -15,20 +15,16 @@ public class UIController : MonoBehaviour {
 	public RectTransform uiSaveIcon;
 	public RectTransform uiTimeIcon;
 
-
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public Slider uiTimerRemainingSlider;
 
 	public void setTimerText(string timeText) {
 		if(uiTimerText != null) {
 			uiTimerText.text = timeText;
 		}
+	}
+
+	public void SetTimerBar(float amount)
+	{
+		uiTimerRemainingSlider.value = amount;
 	}
 }
