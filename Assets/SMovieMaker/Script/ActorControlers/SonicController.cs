@@ -56,6 +56,8 @@ public class SonicController : MonoBehaviour
 	public Transform CamParent;
 	public Camera FirstPersonCam;
 
+	public bool IsLimp { get; set; }
+
 	void Awake()
 	{
 		FindBodyParts();
@@ -221,7 +223,7 @@ public class SonicController : MonoBehaviour
 			}
 		}
 
-		if(_resetTimer > 30f)
+		if(AIMode == AIType.Player && _resetTimer > 30f)
 		{
 			Destroy(gameObject);
 		}
@@ -280,6 +282,11 @@ public class SonicController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if(IsLimp)
+		{
+			return;
+		}
+
 		switch(ControlMode)
 		{
 		case ControlType.Old:

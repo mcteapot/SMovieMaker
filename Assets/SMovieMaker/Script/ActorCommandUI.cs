@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
@@ -12,12 +13,18 @@ public class ActorCommandUI : MonoBehaviour
 	[SerializeField] private GameObject _commandsUIParent;
 	[SerializeField] private Text _characterNameText;
 
+	//[SerializeField] private Text _
+
 	void Update()
 	{
-		var aimedChar = GetAimedAtCharacter();
+		var aimedChars = GetAimedAtCharacters();
 
-		SetUIForCharacter(aimedChar);
-		InputCheckForCharacter(aimedChar);
+		SetUIForCharacters(aimedChars);
+
+		foreach(var sonic in aimedChars)
+		{
+			InputCheckForCharacter(sonic);
+		}
 	}
 
 	private void SetUIActive(bool isActive)
@@ -25,15 +32,22 @@ public class ActorCommandUI : MonoBehaviour
 		_commandsUIParent.SetActive(isActive);
 	}
 
-	private SonicController GetAimedAtCharacter()
+	private List<SonicController> GetAimedAtCharacters()
 	{
-		RaycastHit hit;
-//		if(Physics.Raycast(_camera.ViewportPointToRay(Vector3.one * .5f), out hit, Mathf.Infinity, _mask))
-		if(Physics.SphereCast(_camera.ViewportPointToRay(Vector3.one * .5f), .08125f, out hit, Mathf.Infinity, _mask))
+		var list = new List<SonicController>();
+
+		var hits = Physics.SphereCastAll(_camera.ViewportPointToRay(Vector3.one * .5f), .25f, Mathf.Infinity, _mask);
+
+		foreach(var hit in hits)
 		{
-			return hit.collider.GetComponentInParent<SonicController>();
+			var sonic = hit.collider.GetComponentInParent<SonicController>();
+			if(sonic != null && !list.Contains(sonic))
+			{
+				list.Add(sonic);
+			}
 		}
-		return null;
+
+		return list;
 	}
 
 	private void InputCheckForCharacter(SonicController character)
@@ -42,8 +56,6 @@ public class ActorCommandUI : MonoBehaviour
 		{
 			return;
 		}
-
-		_characterNameText.text = character.name.Replace("(Clone)","") + ":";
 
 		if(Input.GetKeyDown(KeyCode.Z))
 		{
@@ -55,14 +67,22 @@ public class ActorCommandUI : MonoBehaviour
 			character.PlayRandomVoiceClip();
 			character.TellSpeedUp();
 		}
+		if(Input.GetKeyDown(KeyCode.C))
+		{
+			character.IsLimp = !character.IsLimp;
+		}
 	}
 
-	private void SetUIForCharacter(SonicController character)
+	private void SetUIForCharacters(List<SonicController> characters)
 	{
-		SetUIActive(character != null);
-		if(character == null)
+		SetUIActive(characters != null && characters.Count > 0);
+
+		var str = string.Empty;
+		foreach(var sonic in characters)
 		{
-			return;
+			str += sonic.name.Replace("(Clone)","") + " ";
 		}
+
+		_characterNameText.text = str.TrimEnd(' ') + ":";
 	}
 }
