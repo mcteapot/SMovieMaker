@@ -122,6 +122,7 @@ public static class MovieMakerSaveManager
 	public static void SetLevelUnlocked(int levelNumber, bool unlocked = true)
 	{
 		PlayerPrefs.SetInt(GetLevelUnlockedKey(levelNumber), unlocked ? 1 : 0);
+		PlayerPrefs.Save();
 	}
 
 
@@ -138,6 +139,7 @@ public static class MovieMakerSaveManager
 	public static void SetLevelCompleted(int levelNumber, bool completed = true)
 	{
 		PlayerPrefs.SetInt(GetLevelCompletedKey(levelNumber), completed ? 1 : 0);
+		PlayerPrefs.Save();
 	}
 
 	public static void ClearAllLevelData(int maxLevelNumber)
@@ -146,6 +148,7 @@ public static class MovieMakerSaveManager
 		{
 			ClearLevelData(i);
 		}
+		PlayerPrefs.Save();
 	}
 
 	public static void ClearLevelData(int levelNumber)

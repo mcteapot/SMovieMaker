@@ -81,8 +81,13 @@ public class MovieMakerGameController : MonoBehaviour
 		}
 	}
 
-	void OLD_Update()
+	void Update()
 	{
+		if(Scenario != null)
+		{
+			return;
+		}
+
 		for(int i=0;i<MAX_PLAYERS;i++)
 		{
 			CheckForSwitch(i);
