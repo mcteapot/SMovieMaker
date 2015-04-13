@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 412302}
   - 33: {fileID: 3312304}
   - 23: {fileID: 2312304}
-  m_Layer: 31
+  m_Layer: 21
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412304}
-  m_Layer: 31
+  m_Layer: 21
   m_Name: Skin_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 54: {fileID: 5431028}
   - 114: {fileID: 11431028}
   - 135: {fileID: 13531028}
-  m_Layer: 31
+  m_Layer: 21
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}

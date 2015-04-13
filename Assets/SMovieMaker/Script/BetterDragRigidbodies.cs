@@ -31,7 +31,7 @@ public class BetterDragRigidbodies : MonoBehaviour
 
 	public Vector3 GetMousePos()
 	{
-		return Input.mousePosition;
+		return Screen.lockCursor ? new Vector3(Screen.width * .5f, Screen.height * .5f, 0f) : Input.mousePosition;
 	}
 
 	void  Update ()
@@ -44,9 +44,13 @@ public class BetterDragRigidbodies : MonoBehaviour
 		var mainCamera = FindCamera();
 		// We need to actually hit an object
 		RaycastHit hit;
-		if (!Physics.Raycast(mainCamera.ScreenPointToRay(GetMousePos()), out hit, 100f, Mask))
-		{
 
+		var ray = mainCamera.ScreenPointToRay(GetMousePos());
+
+		Debug.DrawRay(ray.origin, ray.direction, Color.red);
+
+		if (!Physics.Raycast(ray, out hit, 100f, Mask))
+		{
 			return;
 		}
 
@@ -107,7 +111,6 @@ public class BetterDragRigidbodies : MonoBehaviour
 
 		while (CheckInput())
 		{
-			Debug.Log(springJoint.connectedBody, springJoint);
 			var ray = mainCamera.ScreenPointToRay (GetMousePos());
 			springJoint.transform.position = ray.GetPoint(distance);
 			yield return null;

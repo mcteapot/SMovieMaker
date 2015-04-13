@@ -1,18 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/BetterDragRigidbodies.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/Cam/FilterController.cs">
     <Files>
       <File FileName="Assets/SMovieMaker/Script/UI/UIController.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/Cam/ControllerCamera.cs" Line="243" Column="28" />
+      <File FileName="Assets/SMovieMaker/Script/Cam/ControllerCamera.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/ActorControlers/SonicController.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/CamcorderZoom.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="143" Column="3" />
-      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerLevelButton.cs" Line="24" Column="4" />
-      <File FileName="Assets/SMovieMaker/Script/MovieMakerGameController.cs" Line="88" Column="11" />
-      <File FileName="Assets/SMovieMaker/Script/Cam/CamCaptureControler.cs" Line="130" Column="17" />
-      <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="31" Column="27" />
-      <File FileName="Assets/SMovieMaker/Script/BetterDragRigidbodies.cs" Line="67" Column="11" />
-      <File FileName="Assets/OceanIdle/Scripts/AddBuoyancy.cs" Line="53" Column="3" />
+      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerLevelButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/MovieMakerGameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/Cam/CamCaptureControler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/BetterDragRigidbodies.cs" Line="132" Column="23" />
+      <File FileName="Assets/OceanIdle/Scripts/AddBuoyancy.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/Cam/FilterController.cs" Line="16" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +21,9 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="SMovieMaker" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="BetterDragRigidbodies.cs" selected="True" />
+                <Node name="Cam" expanded="True">
+                  <Node name="FilterController.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
