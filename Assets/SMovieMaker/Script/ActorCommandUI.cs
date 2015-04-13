@@ -7,7 +7,7 @@ using System;
 public class ActorCommandUI : MonoBehaviour 
 {
 	[SerializeField] private Camera _camera;
-	[SerializeField] private GameController gameController;
+	[SerializeField] private MovieMakerGameController gameController;
 	[SerializeField] private LayerMask _mask;
 
 	[SerializeField] private GameObject _commandsUIParent;

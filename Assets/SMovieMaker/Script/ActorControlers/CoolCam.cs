@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 public class CoolCam : MonoBehaviour 
 {
-	public GameController GameController;
+	public MovieMakerGameController GameController;
 	public Transform CenterPoint;
 
 	void Start()
 	{
-		GameController = GameController ?? FindObjectOfType<GameController>();
+		GameController = GameController ?? FindObjectOfType<MovieMakerGameController>();
 	}
 
 	void LateUpdate()

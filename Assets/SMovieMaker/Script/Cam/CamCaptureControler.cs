@@ -127,7 +127,7 @@ public class CamCaptureControler : MonoBehaviour {
 		QualitySettings.vSyncCount = tempVsync;
 	}
 
-	public void SaveMovie() {
+	public string SaveMovie() {
 		Debug.Log("Save Movie");
 		isSavingToDrive = true;
 
@@ -137,7 +137,7 @@ public class CamCaptureControler : MonoBehaviour {
 
 		isSavingToDrive = false;
 
-
+		return filePath;
 	}
 
 	public void InitVideoAudio() {

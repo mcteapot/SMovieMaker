@@ -14,7 +14,7 @@ public class ControllerCamera : MonoBehaviour {
 	private bool saveMovie = false;
 	private bool isSaving = false;
 
-
+	// TODO: see if this works as a float instead
 	public int maxTimeSeconds = 15;
 
 	public UIController uiControler;
@@ -27,9 +27,18 @@ public class ControllerCamera : MonoBehaviour {
 	private TimeSpan maxTime;
 
 	private TimeSpan remaining { get { return maxTime - stopWatch.Elapsed; } }
+	
+	public bool CanRecord
+	{
+		// HACK: to deal with leftover input from menu
+		get { return !isSaving && Time.timeSinceLevelLoad > .25f; }
+	}
+
+	public Action<string> SaveCompleted;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		//countDown = true;
 
 		stopWatch = new Stopwatch();
@@ -56,20 +65,53 @@ public class ControllerCamera : MonoBehaviour {
 		checkTime();
 	}
 
-	void inputControls() {
-		// Input Controls
-		//if(Input.GetKeyDown ("r")) {
+	void inputControls() 
+	{
+		if(CanRecord)
+		{
+			if(isRecording)
+			{
+				if(Input.GetMouseButton(0) == false)
+				{
+					uiControler.uiRecordText.text = "RECORD";
+					isRecording = false;
 
+					if(stopWatch.IsRunning)
+					{
+						stopWatch.Stop();
+					}
+				}
+			}
+			else
+			{
+				if(Input.GetMouseButton(0))
+				{
+					uiControler.uiRecordText.text = "PAUSE";
+					isRecording = true;
+
+					if(!isMaxTime) 
+					{
+						stopWatch.Start();
+					}
+				}
+			}
+		}
+
+		/*
 		if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0))
 		{
 			//Debug.Log("WORKING");
-			if(!isSaving) {
+			if(!isSaving) 
+			{
 				if(isRecording)
 				{
 					uiControler.uiRecordText.text = "RECORD";
 					isRecording = false;
-				} else {
-					if(stopWatch.Elapsed.Seconds <= maxTimeSeconds) {
+				} 
+				else 
+				{
+					if(stopWatch.Elapsed.Seconds <= maxTimeSeconds) 
+					{
 						uiControler.uiRecordText.text = "PAUSE";
 						isRecording = true;
 					}
@@ -84,7 +126,7 @@ public class ControllerCamera : MonoBehaviour {
 					}
 				}
 			}
-		}
+		}*/
 
 		/*
 		if(Input.GetKeyDown("t")) {
@@ -111,7 +153,6 @@ public class ControllerCamera : MonoBehaviour {
 		isMaxTime = false;
 		stopWatch.Reset();
 		maxTime = TimeSpan.FromSeconds(maxTimeSeconds);
-
 	}
 
 	void checkTime() {
@@ -156,25 +197,28 @@ public class ControllerCamera : MonoBehaviour {
 
 	}
 
-	IEnumerator saveingMovie() {
+	IEnumerator saveingMovie() 
+	{
 		isSaving = true;
 
 		uiControler.uiSaveIcon.gameObject.SetActive(true);
 		uiControler.uiRecordIcon.gameObject.SetActive(false);
 		uiControler.uiTimeIcon.gameObject.SetActive(false);
 
-		while(camCaptureControler.recording) {
+		while(camCaptureControler.recording) 
+		{
 			yield return null;
 		}
 
 		//UnityEngine.Debug.Log("Saving Movie");
 
 
-		camCaptureControler.SaveMovie();
+		var filePath = camCaptureControler.SaveMovie();
 
 		yield return new WaitForSeconds(saveTime);
 
-		while(camCaptureControler.isSavingToDrive) {
+		while(camCaptureControler.isSavingToDrive) 
+		{
 			yield return null;
 		}
 
@@ -193,8 +237,11 @@ public class ControllerCamera : MonoBehaviour {
 		uiControler.uiRecordText.text = "RECORD";
 
 		isSaving = false;
-		
-		
+
+		if(SaveCompleted != null)
+		{
+			SaveCompleted(filePath);
+		}
 	}
 	
 }
