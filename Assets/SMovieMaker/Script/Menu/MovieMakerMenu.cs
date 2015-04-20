@@ -30,7 +30,7 @@ public class MovieMakerMenu : MonoBehaviour
 		public class CharacterSetup
 		{
 			public SonicController Character;
-			public Vector3 Scale = new Vector3(1f,1f,1f);
+			public float Scale = 1f;
 		}
 	}
 
