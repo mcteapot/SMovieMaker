@@ -1,20 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/SubtitleController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/MovieMakerScenario.cs">
     <Files>
       <File FileName="Assets/SMovieMaker/Script/Cam/ControllerCamera.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/ActorControlers/SonicController.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/CamcorderZoom.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="20" Column="40" />
       <File FileName="Assets/SMovieMaker/Script/MovieMakerGameController.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/Cam/CamCaptureControler.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/BetterDragRigidbodies.cs" Line="1" Column="1" />
       <File FileName="Assets/OceanIdle/Scripts/AddBuoyancy.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/Cam/FilterController.cs" Line="1" Column="1" />
-      <File FileName="Assets/InputTest.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/SubtitleController.cs" Line="39" Column="3" />
+      <File FileName="Assets/SMovieMaker/Script/MovieMakerScenario.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,8 +25,10 @@
               <Node name="Script" expanded="True">
                 <Node name="ActorControlers" expanded="True" />
                 <Node name="Cam" expanded="True" />
+                <Node name="Menu" expanded="True">
+                  <Node name="MovieMakerMenu.cs" selected="True" />
+                </Node>
                 <Node name="UI" expanded="True" />
-                <Node name="SubtitleController.cs" selected="True" />
               </Node>
             </Node>
           </Node>

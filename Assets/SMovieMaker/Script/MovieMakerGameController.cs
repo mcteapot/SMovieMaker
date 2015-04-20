@@ -17,7 +17,7 @@ public class MovieMakerGameController : MonoBehaviour
 
 	public ControllerCamera ControllerCamera;
 
-	private MovieMakerMenu.MovieMakerScenario Scenario;
+	private MovieMakerScenario Scenario;
 
 	private Action<MovieMakerMenu.MovieMakerLevelResult> LevelFinished;
 
@@ -36,7 +36,7 @@ public class MovieMakerGameController : MonoBehaviour
 	}
 
 	// be careful, does not clean up any existing players
-	private void LoadScenario(MovieMakerMenu.MovieMakerScenario scenario)
+	private void LoadScenario(MovieMakerScenario scenario)
 	{
 		Scenario = scenario;
 		LevelFinished = scenario.OnComplete;
@@ -142,7 +142,7 @@ public class MovieMakerGameController : MonoBehaviour
 		return newObj;
 	}
 
-	public SonicController SpawnPlayer(int playerIndex, MovieMakerMenu.MovieMakerScenario.CharacterSetup characterSetup)
+	public SonicController SpawnPlayer(int playerIndex, MovieMakerScenario.CharacterSetup characterSetup)
 	{
 		var player = SpawnPlayer(playerIndex, characterSetup.Character);
 

@@ -16,23 +16,6 @@ public class MovieMakerMenu : MonoBehaviour
 			FilePath = filePath;
 		}
 	}
-	
-	[Serializable]
-	public class MovieMakerScenario
-	{
-		public string Name = "New Scenario";
-		public CharacterSetup[] Characters;
-		public float VideoLength = 12f;
-
-		public Action<MovieMakerLevelResult> OnComplete { get; set; }
-
-		[Serializable]
-		public class CharacterSetup
-		{
-			public SonicController Character;
-			public float Scale = 1f;
-		}
-	}
 
 	public MovieMakerScenario[] Scenarios;
 	public MovieMakerLevelButton[] Buttons;
