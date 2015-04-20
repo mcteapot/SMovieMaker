@@ -106,6 +106,7 @@ public static class MovieMakerSaveManager
 
 	public static bool IsLevelUnlocked(int levelNumber)
 	{
+		return true;
 		return PlayerPrefs.GetInt(GetLevelUnlockedKey(levelNumber), 0) > 0;
 	}
 

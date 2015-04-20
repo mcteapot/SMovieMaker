@@ -21,6 +21,8 @@ public class MovieMakerGameController : MonoBehaviour
 
 	private Action<MovieMakerMenu.MovieMakerLevelResult> LevelFinished;
 
+	public Transform[] SpawnPoints;
+
 	public void Awake()
 	{
 		var scenario = MovieMakerMenu.NextScenario;
@@ -177,9 +179,12 @@ public class MovieMakerGameController : MonoBehaviour
 		return newobj;
 	}
 
+	private int _numSpawns = 0;
 	public Vector3 GetSpawnPos()
 	{
-		return transform.position;
+		var pos = SpawnPoints[_numSpawns % SpawnPoints.Length].position;
+		_numSpawns++;
+		return pos;
 	}
 
 	public Quaternion GetSpawnRotation()
