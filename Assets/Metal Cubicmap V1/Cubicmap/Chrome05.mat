@@ -43,12 +43,12 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .417910457, g: .417910457, b: .417910457, a: 1}
+        second: {r: .257352948, g: .257352948, b: .257352948, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .588235259, g: .588235259, b: .588235259, a: 1}
       data:
         first:
           name: _ReflectColor
-        second: {r: .589552283, g: .589552283, b: .589552283, a: .513725519}
+        second: {r: .308823526, g: .308823526, b: .308823526, a: .513725519}
