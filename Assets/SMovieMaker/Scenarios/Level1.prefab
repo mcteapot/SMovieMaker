@@ -42,9 +42,9 @@ MonoBehaviour:
   Name: Level 1
   Characters:
   - Character: {fileID: 11409200, guid: 1cfa0a8db1f5c4418bcd0fb9186b8af1, type: 2}
-    Scale: .5
+    Scale: 1
   - Character: {fileID: 11494132, guid: eee135f8e65d54f0e898b650b0859725, type: 2}
-    Scale: .5
+    Scale: 1
   VideoLength: 12
 --- !u!1001 &100100000
 Prefab:

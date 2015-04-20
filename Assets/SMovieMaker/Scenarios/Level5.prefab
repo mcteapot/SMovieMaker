@@ -44,11 +44,15 @@ MonoBehaviour:
   - Character: {fileID: 11433554, guid: 716b4a376afbd4c6fa94ebc5099b3cfc, type: 2}
     Scale: 1
   - Character: {fileID: 11492890, guid: 8b0620e5124444d108c3dca71cf3259d, type: 2}
-    Scale: 1
+    Scale: .5
   - Character: {fileID: 11492890, guid: 8b0620e5124444d108c3dca71cf3259d, type: 2}
-    Scale: 1
+    Scale: .5
   - Character: {fileID: 11492890, guid: 8b0620e5124444d108c3dca71cf3259d, type: 2}
-    Scale: 1
+    Scale: .5
+  - Character: {fileID: 11492890, guid: 8b0620e5124444d108c3dca71cf3259d, type: 2}
+    Scale: .5
+  - Character: {fileID: 11492890, guid: 8b0620e5124444d108c3dca71cf3259d, type: 2}
+    Scale: .5
   VideoLength: 12
 --- !u!1001 &100100000
 Prefab:

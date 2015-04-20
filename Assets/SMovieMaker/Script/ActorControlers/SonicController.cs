@@ -58,6 +58,33 @@ public class SonicController : MonoBehaviour
 
 	public bool IsLimp { get; set; }
 
+	private bool _initScale = false;
+	private Vector3 _originalScale;
+	private float _scale = 1f;
+	public float Scale 
+	{ 
+		get
+		{
+			return _scale;
+		}
+		set
+		{
+			if(_initScale == false)
+			{
+				_initScale = true;
+				_originalScale = transform.localScale;
+			}
+
+			_scale = value;
+			transform.localScale = _originalScale * _scale;
+
+			foreach(var rb in GetComponentsInChildren<Rigidbody>())
+			{
+				rb.mass = rb.mass * (_scale * _scale);
+			}
+		}
+	}
+
 	void Awake()
 	{
 		FindBodyParts();
@@ -439,7 +466,7 @@ public class SonicController : MonoBehaviour
 	public AudioClip PlayRandomVoiceClip()
 	{
 		var clip = GetRandomVoiceClip();
-		AudioSource.PlayClipAtPoint(clip, transform.position);
+		AudioClipUtil.PlayClipAtPoint(clip, transform.position, Mathf.Lerp(1f, 1f/ Scale, .1f));
 		return clip;
 	}
 

@@ -148,14 +148,7 @@ public class MovieMakerGameController : MonoBehaviour
 
 		if(Mathf.Approximately(characterSetup.Scale, 1f) == false)
 		{
-			var scale = player.transform.localScale;
-			scale *= characterSetup.Scale;
-			player.transform.localScale = scale;
-
-			foreach(var rb in player.GetComponentsInChildren<Rigidbody>())
-			{
-//				rb.mass = rb.mass * (characterSetup.Scale * characterSetup.Scale);
-			}
+			player.Scale = characterSetup.Scale;
 		}
 
 		return player;
