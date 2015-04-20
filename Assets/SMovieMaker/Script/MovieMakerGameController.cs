@@ -142,6 +142,25 @@ public class MovieMakerGameController : MonoBehaviour
 		return newObj;
 	}
 
+	public SonicController SpawnPlayer(int playerIndex, MovieMakerMenu.MovieMakerScenario.CharacterSetup characterSetup)
+	{
+		var player = SpawnPlayer(playerIndex, characterSetup.Character);
+
+		if(characterSetup.Scale != Vector3.one)
+		{
+			var scale = player.transform.localScale;
+			scale.Scale(characterSetup.Scale);
+			player.transform.localScale = scale;
+
+			foreach(var rb in player.GetComponentsInChildren<Rigidbody>())
+			{
+				rb.mass = rb.mass * ((scale.x + scale.y + scale.z) / 3f);
+			}
+		}
+
+		return player;
+	}
+
 	public SonicController SpawnPlayer(int playerIndex, SonicController characterPrefab)
 	{
 		var currentOne = CurrentPlayers[playerIndex];

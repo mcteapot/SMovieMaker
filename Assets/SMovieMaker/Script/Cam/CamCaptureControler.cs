@@ -81,29 +81,10 @@ public class CamCaptureControler : MonoBehaviour {
 	private void SetFilePatch() {
 		
 		string dateString = DateTime.Now.ToString("MMddyyyy_hmmss");
-		
-		//Debug.Log(dateString);
-		
-		
-		if(saveToDesktop) {
-			if ((Application.platform == RuntimePlatform.WindowsPlayer) || (Application.platform == RuntimePlatform.WindowsEditor)) {
-				filePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory) + "\\SonicMM_" + dateString + ".avi";
-			} else {
-				filePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory) + "/SonicMM_" + dateString + ".avi";
-			}
-		} else {
-			string directorLocation = Application.dataPath;
-			//Debug.Log("directorLocation " + directorLocation);
-			
-			if ((Application.platform == RuntimePlatform.WindowsPlayer) || (Application.platform == RuntimePlatform.WindowsEditor)) {
-				filePath = directorLocation + "\\SonicMM_" + dateString + ".avi";
-			} else {
-				filePath = directorLocation + "/SonicMM_" + dateString + ".avi";
-			}
-			
-			
-		}
-		
+
+		string fileName = "SonicMM_" + dateString + ".avi";
+		string directory = saveToDesktop ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.DesktopDirectory) : Application.dataPath;
+		filePath = System.IO.Path.Combine(directory, fileName);
 	}
 	
 

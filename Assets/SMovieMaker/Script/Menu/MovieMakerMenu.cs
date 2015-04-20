@@ -21,10 +21,17 @@ public class MovieMakerMenu : MonoBehaviour
 	public class MovieMakerScenario
 	{
 		public string Name = "New Scenario";
-		public SonicController[] Characters;
+		public CharacterSetup[] Characters;
 		public float VideoLength = 12f;
 
 		public Action<MovieMakerLevelResult> OnComplete { get; set; }
+
+		[Serializable]
+		public class CharacterSetup
+		{
+			public SonicController Character;
+			public Vector3 Scale = new Vector3(1f,1f,1f);
+		}
 	}
 
 	public MovieMakerScenario[] Scenarios;

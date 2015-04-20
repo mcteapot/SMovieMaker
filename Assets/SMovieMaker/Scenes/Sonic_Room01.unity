@@ -151,7 +151,7 @@ GameObject:
   - 4: {fileID: 40061333}
   - 33: {fileID: 40061335}
   - 23: {fileID: 40061334}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1129,7 @@ GameObject:
   - 23: {fileID: 221305088}
   - 65: {fileID: 221305091}
   - 54: {fileID: 221305090}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Lamp0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2366,7 +2366,7 @@ GameObject:
   - 4: {fileID: 496096450}
   - 33: {fileID: 496096452}
   - 23: {fileID: 496096451}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: DEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2898,7 +2898,7 @@ GameObject:
   - 135: {fileID: 761380564}
   - 135: {fileID: 761380565}
   - 54: {fileID: 761380566}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Pillow1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,7 +4978,7 @@ GameObject:
   - 4: {fileID: 1126168402}
   - 33: {fileID: 1126168404}
   - 23: {fileID: 1126168403}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: PictureFram
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   HoverGUIObject: {fileID: 1053666122}
   Mask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4194560
 --- !u!1 &1188212394
 GameObject:
   m_ObjectHideFlags: 0
@@ -6199,8 +6199,8 @@ GameObject:
   - 4: {fileID: 1303299195}
   - 65: {fileID: 1303299197}
   - 54: {fileID: 1303299196}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 22
+  m_Name: PictureFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6437,7 +6437,7 @@ GameObject:
   - 4: {fileID: 1371332634}
   - 33: {fileID: 1371332636}
   - 23: {fileID: 1371332635}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8582,7 +8582,7 @@ GameObject:
   - 135: {fileID: 1680938009}
   - 135: {fileID: 1680938008}
   - 54: {fileID: 1680938007}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: Pillow0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8679,7 +8679,7 @@ GameObject:
   - 4: {fileID: 1684269424}
   - 33: {fileID: 1684269426}
   - 23: {fileID: 1684269425}
-  m_Layer: 0
+  m_Layer: 22
   m_Name: deden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
