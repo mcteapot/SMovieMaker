@@ -8,14 +8,19 @@ public class Desirable : MonoBehaviour
 	public float MaxDistance = 5f;
 	public float AttractionPower = 100f;
 
+	protected SonicController NearestCharacter;
+
 	void Start()
 	{
 		GameController = FindObjectOfType<MovieMakerGameController>();
 	}
 
-	private void FixedUpdate()
+	protected virtual void FixedUpdate()
 	{
 		var sqrMag = MaxDistance * MaxDistance;
+		var lowest = Mathf.Infinity;
+		NearestCharacter = null;
+
 		foreach(var sonic in GameController.CurrentPlayers)
 		{
 			if(sonic == null)
@@ -23,7 +28,15 @@ public class Desirable : MonoBehaviour
 				continue;
 			}
 
-			if(Vector3.SqrMagnitude(sonic.Head.transform.position - transform.position) <= sqrMag)
+			var sqrMagnitude = Vector3.SqrMagnitude(sonic.Head.transform.position - transform.position);
+
+			if(sqrMagnitude < lowest)
+			{
+				lowest = sqrMagnitude;
+				NearestCharacter = sonic;
+			}
+
+			if(sqrMagnitude <= sqrMag)
 			{
 				sonic.AttractTo(gameObject, AttractionPower);
 				Debug.DrawLine(sonic.Head.transform.position, transform.position, Color.red);

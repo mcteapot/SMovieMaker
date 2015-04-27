@@ -1,23 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/Props/Desirable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/Props/SpikeRhino.cs">
     <Files>
-      <File FileName="Assets/SMovieMaker/Script/Cam/ControllerCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/ActorControlers/SonicController.cs" Line="284" Column="10" />
-      <File FileName="Assets/SMovieMaker/Script/CamcorderZoom.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="6" Column="45" />
-      <File FileName="Assets/SMovieMaker/Script/MovieMakerGameController.cs" Line="170" Column="44" />
-      <File FileName="Assets/SMovieMaker/Script/Cam/CamCaptureControler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/BetterDragRigidbodies.cs" Line="1" Column="1" />
-      <File FileName="Assets/OceanIdle/Scripts/AddBuoyancy.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/Cam/FilterController.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/SubtitleController.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/MovieMakerScenario.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/AudioClipUtil.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/Props/Desirable.cs" Line="11" Column="11" />
+      <File FileName="Assets/SMovieMaker/Script/Props/SpikeRhino.cs" Line="8" Column="2" />
       <File FileName="Assets/SMovieMaker/Script/ActorControlers/CoolCollider.cs" Line="14" Column="34" />
-      <File FileName="Assets/SMovieMaker/Script/Props/Desirable.cs" Line="1" Column="1" />
+      <File FileName="Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" Line="72" Column="107" />
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/MouseLook.cs" Line="20" Column="69" />
+      <File FileName="Assets/First Person Drifter Controller/Scripts/LockMouse.cs" Line="21" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,10 +15,9 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="SMovieMaker" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="ActorControlers" expanded="True">
-                  <Node name="SonicController.cs" selected="True" />
+                <Node name="Props" expanded="True">
+                  <Node name="SpikeRhino.cs" selected="True" />
                 </Node>
-                <Node name="Menu" expanded="True" />
               </Node>
             </Node>
           </Node>
