@@ -238,7 +238,7 @@ public class SonicController : MonoBehaviour
 
 	private void Update()
 	{
-		inputs = GetInputs(ControllerNumber);
+		UpdateInputs(ControllerNumber);
 
 		_resetTimer += Time.deltaTime;
 
@@ -267,29 +267,21 @@ public class SonicController : MonoBehaviour
 			}
 		}
 
-		/*
-		if(Input.GetButtonDown("Player"+ControllerNumber+" Voice"))
-		{
-			PlayRandomVoiceClip();
-		}
-		*/
-
 		spinTimer -= Time.deltaTime;
 		_voiceTimer -= Time.deltaTime;
 	}
 
-	private float[] GetInputs(int controllerNumber)
+	private void UpdateInputs(int controllerNumber)
 	{
 		switch (AIMode)
 		{
 		case AIType.Player:
-			return new float[]
-			{
-				Input.GetAxis(string.Format("Player{0} Horizontal", controllerNumber)),
-				Input.GetAxis(string.Format("Player{0} Vertical", controllerNumber)),
-			};
+			inputs[0] = Input.GetAxis(string.Format("Player{0} Horizontal", controllerNumber));
+			inputs[1] = Input.GetAxis(string.Format("Player{0} Vertical", controllerNumber));
+			break;
 		default:
-			return GetAIInputs();
+			UpdateAIInputs();
+			break;
 		}
 
 
@@ -297,14 +289,11 @@ public class SonicController : MonoBehaviour
 
 	public float AISpeed = 1f;
 	float _aiTime;
-	private float[] GetAIInputs()
+	private void UpdateAIInputs()
 	{
 		_aiTime += Time.deltaTime * AISpeed;
-		return new float[]
-		{
-			0f,
-			Mathf.Cos(_aiTime)
-		};
+		inputs[0] = 0f;
+		inputs[1] = Mathf.Cos(_aiTime);
 	}
 
 	private void FixedUpdate()
@@ -489,5 +478,14 @@ public class SonicController : MonoBehaviour
 	public void TellSlowDown()
 	{
 		AdjustAISpeed(-.25f);
+	}
+
+	public void AttractTo(GameObject target, float amount)
+	{
+		foreach(var joint in Joints)
+		{
+			var offset = target.transform.position - joint.transform.position;
+			joint.rigidbody.AddForce(offset.normalized * amount * Time.deltaTime, ForceMode.Force);
+		}
 	}
 }

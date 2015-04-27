@@ -12,6 +12,11 @@ public class LockMouse : MonoBehaviour
 
     void Update()
     {
+		if(Input.GetMouseButtonDown(1))
+		{
+			LockCursor(true);
+		}
+
     	// lock when mouse is clicked
     	if( Input.GetMouseButtonDown(0) && Time.timeScale > 0.0f )
     	{

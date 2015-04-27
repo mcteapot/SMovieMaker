@@ -47,7 +47,7 @@ MonoBehaviour:
     Scale: 1
   - Character: {fileID: 11433554, guid: 716b4a376afbd4c6fa94ebc5099b3cfc, type: 2}
     Scale: 1
-  VideoLength: 12
+  VideoLength: 8
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -1,21 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SMovieMaker/Script/Props/Desirable.cs">
     <Files>
       <File FileName="Assets/SMovieMaker/Script/Cam/ControllerCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/ActorControlers/SonicController.cs" Line="95" Column="26" />
+      <File FileName="Assets/SMovieMaker/Script/ActorControlers/SonicController.cs" Line="284" Column="10" />
       <File FileName="Assets/SMovieMaker/Script/CamcorderZoom.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="82" Column="21" />
-      <File FileName="Assets/SMovieMaker/Script/MovieMakerGameController.cs" Line="176" Column="49" />
+      <File FileName="Assets/SMovieMaker/Script/Menu/MovieMakerMenu.cs" Line="6" Column="45" />
+      <File FileName="Assets/SMovieMaker/Script/MovieMakerGameController.cs" Line="170" Column="44" />
       <File FileName="Assets/SMovieMaker/Script/Cam/CamCaptureControler.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/BetterDragRigidbodies.cs" Line="1" Column="1" />
       <File FileName="Assets/OceanIdle/Scripts/AddBuoyancy.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Script/Cam/FilterController.cs" Line="1" Column="1" />
       <File FileName="Assets/SMovieMaker/Plugins/CamVideoCapture.cs" Line="1" Column="1" />
-      <File FileName="Assets/SMovieMaker/Script/SubtitleController.cs" Line="39" Column="3" />
-      <File FileName="Assets/SMovieMaker/Script/MovieMakerScenario.cs" Line="16" Column="36" />
-      <File FileName="Assets/SMovieMaker/Script/AudioClipUtil.cs" Line="12" Column="17" />
+      <File FileName="Assets/SMovieMaker/Script/SubtitleController.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/MovieMakerScenario.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/AudioClipUtil.cs" Line="1" Column="1" />
+      <File FileName="Assets/SMovieMaker/Script/ActorControlers/CoolCollider.cs" Line="14" Column="34" />
+      <File FileName="Assets/SMovieMaker/Script/Props/Desirable.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,10 +25,10 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="SMovieMaker" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="ActorControlers" expanded="True" />
-                <Node name="Menu" expanded="True">
-                  <Node name="MovieMakerMenu.cs" selected="True" />
+                <Node name="ActorControlers" expanded="True">
+                  <Node name="SonicController.cs" selected="True" />
                 </Node>
+                <Node name="Menu" expanded="True" />
               </Node>
             </Node>
           </Node>

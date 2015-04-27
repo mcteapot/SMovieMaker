@@ -11,7 +11,7 @@ public class CoolCollider : MonoBehaviour
 	{
 		var otherTag = collision.collider.tag;
 
-		if(otherTag.StartsWith("Player") && otherTag != gameObject.tag)
+		if((otherTag.StartsWith("Player") && otherTag != gameObject.tag) || otherTag.StartsWith("Desirable"))
 		{
 			if(OnCollisionAction != null)
 			{

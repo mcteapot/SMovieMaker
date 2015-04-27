@@ -91,6 +91,16 @@ public class MovieMakerMenu : MonoBehaviour
 		MovieMakerSaveManager.SetLevelUnlocked(1);
 		SetButtonStates();
 	}
+
+	public void UnlockAllLevels()
+	{
+		for(int i=1;i>=Buttons.Length;i++)
+		{
+			MovieMakerSaveManager.SetLevelUnlocked(i);
+		}
+
+		SetButtonStates();
+	}
 }
 
 public static class MovieMakerSaveManager
