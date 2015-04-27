@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gif2Textures</name>
+    </assembly>
+    <members>
+        <member name="M:Gif2Textures.GifFrames.Load(System.IO.Stream,System.Boolean)">
+            <summary>
+                Loads a gif stream.
+            </summary>
+            <param name = "stream">
+                The gif stream
+            </param>
+            <param name = "cacheTextures">
+                true to load all frames from the gif stream, convert them to textures immediately and catch them.
+                This way consume more memory, but the animation can be very smooth;
+                false to just load all frames from the gif stream but not convert them to textures immediately.
+                Only 1 frame of gif will be converted to texture every time you call GetNextFrame. And previous frame will be released.
+                So this way consume less memory, but the animation may be no so smooth becasue we have to generate a new texture and release previous one every time you call GetNextFrame.
+            </param>
+            <returns>
+                A value that determines whether the gif loaded successfully or not. If it reture false, it means the gif stream is incomplete or it isn't a gif at all.
+            </returns>
+        </member>
+        <member name="M:Gif2Textures.GifFrames.GetFrameCount">
+            <summary>
+            Get frame count of the gif.
+            </summary>
+            <returns>
+                The frame count of the gif.
+            </returns>
+        </member>
+        <member name="M:Gif2Textures.GifFrames.GetNextFrame(UnityEngine.Texture2D@,System.Single@)">
+            <summary>
+            Get a texture and a delay of a frame of the gif. You will get the 1st frame when 1st time call this function.
+            You will get 2nd frame if you call this it again. You will get 1st frame again when you call it the N+1 (N is the frame number of the gif) time.
+            So, you can just keep calling this function after the delay of previous frame to get the texture of next frame and use it no matter how.
+            </summary>
+            <param name = "texture">
+                the texture of next frame
+            </param>
+            <param name = "delay">
+                how long the frame should stay
+            </param>
+            <returns>
+                A value that determines whether you get next frame successfully or not. If it return false, it means the gif hasn't been loaded successfully.
+            </returns>
+        </member>
+        <member name="M:Gif2Textures.GifFrames.Restart">
+            <summary>
+            Reset the animation. You will get the 1st frame next time you call GetNextFrame.
+            </summary>
+        </member>
+    </members>
+</doc>

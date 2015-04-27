@@ -139,12 +139,12 @@ Material:
         second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _SampleScale
-        second: {r: .5, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _ReflectColor
         second: {r: 1, g: 1, b: 1, a: .5}
+      data:
+        first:
+          name: _SampleScale
+        second: {r: .5, g: 1, b: 0, a: 0}
       data:
         first:
           name: _Scale
